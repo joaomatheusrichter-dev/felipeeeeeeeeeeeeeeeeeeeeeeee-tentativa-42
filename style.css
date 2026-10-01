@@ -1,0 +1,145 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1D4221;
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilização do conteúdo principal */
+main {
+    max-width: 90%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Controle dos passos */
+.passo {
+    display: none;
+}
+
+.passo.ativo {
+    display: block;
+}
+
+/* Imagens */
+img {
+    max-width: 90%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Parágrafos */
+.passo p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 20px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização dos botões */
+.btn-proximo {
+    background-color: #64A712;
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 14px 30px;
+    margin: 10px 8px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(100, 167, 18, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-proximo:hover {
+    background-color: #7CCD2A;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 25px rgba(100, 167, 18, 0.5);
+}
+
+.btn-proximo:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 10px rgba(100, 167, 18, 0.3);
+}
+
+/* Estilo diferente para o segundo botão (opção alternativa) */
+.btn-proximo:last-child {
+    background-color: #4A7A0E;
+    box-shadow: 0 4px 15px rgba(74, 122, 14, 0.3);
+}
+
+.btn-proximo:last-child:hover {
+    background-color: #5C9A12;
+    box-shadow: 0 6px 25px rgba(74, 122, 14, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .passo p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .btn-proximo {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+        margin: 8px 5px;
+        display: inline-block;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding-top: 30px;
+    }
+
+    main {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .passo p {
+        font-size: 0.9rem;
+    }
+
+    .btn-proximo {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+        max-width: 100%;
+    }
+}
